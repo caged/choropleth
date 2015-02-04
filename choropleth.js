@@ -28,11 +28,13 @@ module.exports = function(argv) {
     var json = JSON.parse(rw.readFileSync(file, 'utf8'))
 
     Object.keys(json.objects).forEach(function(obj) {
-      var features = topojson.mesh(json, json.objects[obj])
+      var features = topojson.feature(json, json.objects[obj]).features
 
-      ctx.beginPath()
-      path(features)
-      ctx.stroke()
+      features.forEach(function(feature) {
+        ctx.beginPath()
+        path(feature)
+        ctx.stroke()
+      })
     })
   }
 
