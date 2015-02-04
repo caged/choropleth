@@ -1,0 +1,20 @@
+{
+  "name": "choropleth",
+  "version": "0.0.0",
+  "description": "Generate choropleth maps from topojson data",
+  "main": "choropleth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "choropleth",
+    "topojson",
+    "map",
+    "gis"
+  ],
+  "author": "Justin Palmer",
+  "license": "MIT",
+  "dependencies": {
+    "topojson": "1.6.18"
+  }
+}
