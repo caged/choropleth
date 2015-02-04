@@ -15,7 +15,7 @@ module.exports = function(argv) {
   ctx.lineJoin = 'round'
   ctx.antialias = 'subpixel'
 
-  var projection = d3.geo.albersUsa()
+  var projection = d3.geo[argv.projection]()
     .scale(width)
     .translate([width / 2, height / 2])
 

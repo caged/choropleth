@@ -3,7 +3,7 @@ var choropleth = require('../'),
     fs = require('fs')
 
 var argv = require('yargs')
-  .default('projection', 'mercator')
+  .default('projection', 'albersUsa')
   .default('width', 960)
   .default('height', 600)
   .default('out', '/dev/stdout')
