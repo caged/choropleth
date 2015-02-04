@@ -7,6 +7,12 @@ var argv = require('yargs')
   .default('width', 960)
   .default('height', 600)
   .default('out', '/dev/stdout')
+  .demand('property')
+  .default('colors', [
+    "#20424c", "#245d5e", "#297968",
+    "#32946c", "#42ad6b", "#5ac169",
+    "#7ad16c", "#a0dc78", "#c6e491", "#e7ecb8"
+  ])
   .argv
 
 argv.out = argv.out === '/dev/stdout'
